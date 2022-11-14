@@ -22,9 +22,7 @@ function MeetupDetails(props) {
 }
 
 export async function getStaticPaths() {
-  const client = await MongoClient.connect(
-    `mongodb+srv://${process.env.NEXT_PUBLIC_MDB_KEY}`
-  );
+  const client = await MongoClient.connect(process.env.NEXT_PUBLIC_MDB_KEY);
   const db = client.db();
 
   const meetupsCollection = db.collection("meetups");
