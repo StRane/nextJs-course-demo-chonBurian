@@ -9,8 +9,11 @@
   },
   "dependencies": {
     "mongodb": "^4.1.2",
-    "next": "10.0.6",
-    "react": "17.0.1",
-    "react-dom": "17.0.1"
+    "next": "^13.0.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@babel/helper-compilation-targets": "^7.20.0"
   }
 }

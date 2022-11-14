@@ -5,7 +5,9 @@ import classes from "./MainNavigation.module.css";
 function MainNavigation() {
   return (
     <header className={classes.header}>
-      <div className={classes.logo}>Chonburian Meetups</div>
+      <div className={classes.logo}>
+        <Link href="/">Chonburian Meetups</Link>
+      </div>
       <nav>
         <ul>
           <li>

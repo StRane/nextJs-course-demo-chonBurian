@@ -32,6 +32,10 @@ function HomePage(props) {
           name="description"
           content="Browse a highly active React chonburian meetups!"
         />
+        <meta
+          name="content"
+          content="Dynamic pages from mongodb response and next routing"
+        />
       </Head>
       <MeetupList meetups={props.meetups} />
     </Fragment>
@@ -51,7 +55,7 @@ function HomePage(props) {
 export async function getStaticProps() {
   //fetch data from an API
   const client = await MongoClient.connect(
-    "mongodb+srv://Umut:uU.4567405142umut@cluster0.pibb1.mongodb.net/meetups?retryWrites=true&w=majority"
+    `mongodb+srv://${process.env.NEXT_PUBLIC_MDB_KEY}`
   );
   const db = client.db();
 
